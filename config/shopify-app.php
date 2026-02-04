@@ -385,6 +385,10 @@ return [
     */
 
     'webhooks' => [
+        [
+            'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC'),
+            'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS'),
+        ],
         /*
             [
                 'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'ORDERS_CREATE'),
@@ -400,7 +404,8 @@ return [
                 'address' => env('SHOPIFY_WEBHOOK_3_ADDRESS', 'https://example.com/webhook/orders-create'),
                 'class' => \App\Shopify\Actions\ExampleAppJob::class
             ],
-        */],
+        */
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -438,12 +443,11 @@ return [
      * @see
      */
     'after_authenticate_job' => [
-        /*
-            [
-                'job' => env('AFTER_AUTHENTICATE_JOB'), // example: \App\Jobs\AfterAuthorizeJob::class
-                'inline' => env('AFTER_AUTHENTICATE_JOB_INLINE', false) // False = dispatch job for later, true = dispatch immediately
-            ],
-        */],
+        [
+            'job' => env('AFTER_AUTHENTICATE_JOB'), // example: \App\Jobs\AfterAuthorizeJob::class
+            'inline' => env('AFTER_AUTHENTICATE_JOB_INLINE', false), // False = dispatch job for later, true = dispatch immediately
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
