@@ -2,7 +2,6 @@
 
 namespace App\Jobs;
 
-use App\Http\Traits\ShopifyTrait;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

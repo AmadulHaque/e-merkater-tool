@@ -33,7 +33,6 @@ class User extends Authenticatable implements IShopModel
      * @var list<string>
      */
     protected $hidden = [
-        'password',
         'remember_token',
     ];
 
