@@ -8,49 +8,51 @@ This document outlines the complete "A to Z" development tasks for the Shopify E
 **Goal:** Stable foundation for Backend and Frontend.
 
 - [ ] **Project Setup**
-    - [ ] Initialize Laravel project.
-    - [ ] Configure Environment (`.env`) for DB, App URL, etc.
-    - [ ] Set up Git repository and ignore rules.
-    - [ ] Install React, Inertia.js, and ShadCN/UI.
-    - [ ] Configure `vite.config.js` for React + Laravel.
+    - [x] Initialize Laravel project.
+    - [x] Configure Environment (`.env`) for DB, App URL, etc.
+    - [x] Set up Git repository and ignore rules.
+    - [x] Install React, Inertia.js, 
+    - [x] Configure `vite.config.js` for React + Laravel.
+    - [x] ShadCN/UI.
 
-- [ ] **Database & Authentication**
-    - [ ] Design initial Database Schema (Users, Roles, Permissions).
-    - [ ] Implement Authentication (Laravel Breeze/Jetstream or custom Fortify).
-    - [ ] Implement RBAC (Role-Based Access Control) for Admin, Operations, Support.
-    - [ ] Create User Management CRUD (Admin only).
 
-- [ ] **Queue & Job Infrastructure**
-    - [ ] Configure Queue Driver (Redis or Database).
-    - [ ] Create base `Job` classes and failure handling policies.
-    - [ ] Set up Supervisor (or equivalent) for local queue processing.
+- [x] **Database & Authentication**
+    - [x] Design initial Database Schema (Users, Roles, Permissions).
+    - [x] Implement Authentication (Laravel Breeze/Jetstream or custom Fortify).
+    - [x] Implement RBAC (Role-Based Access Control) for Admin, Operations, Support.
+    - [x] Create User Management CRUD (Admin only).
 
-- [ ] **Shopify API Integration (Foundation)**
-    - [ ] Create `ShopifyService` class for API interactions.
-    - [ ] Implement OAuth or Access Token management.
-    - [ ] Create "Read-Only" connection test (fetch shop details).
+- [x] **Queue & Job Infrastructure**
+    - [x] Configure Queue Driver (Redis or Database).
+    - [x] Create base `Job` classes and failure handling policies.
+    - [x] Set up Supervisor (or equivalent) for local queue processing.
+
+- [x] **Shopify API Integration (Foundation)**
+    - [x] Create `ShopifyService` class for API interactions.
+    - [x] Implement OAuth or Access Token management.
+    - [x] Create "Read-Only" connection test (fetch shop details).
 
 ---
 
 ## Phase 2: Shopify Operations (Weeks 4–6)
 **Goal:** Fully usable Shopify backend for Orders and Products.
 
-- [ ] **Product Synchronization**
-    - [ ] Design Database Schema for `products`, `variants`, `inventory`.
-    - [ ] Create `SyncProductsJob` (Queueable).
+- [x] **Product Synchronization**
+    - [x] Design Database Schema for `products`, `variants`, `inventory`.
+    - [x] Create `SyncProductsJob` (Queueable).
     - [ ] Implement Shopify Webhook listeners (Product Create/Update/Delete).
     - [ ] Create Product Listing UI (Search, Filter, Pagination).
     - [ ] Implement Manual "Sync Now" button/endpoint.
 
-- [ ] **Order Synchronization**
-    - [ ] Design Database Schema for `orders`, `order_items`, `customers`, `addresses`.
-    - [ ] Create `SyncOrdersJob` (Queueable, Bulk & Incremental).
+- [x] **Order Synchronization**
+    - [x] Design Database Schema for `orders`, `order_items`, `customers`, `addresses`.
+    - [x] Create `SyncOrdersJob` (Queueable, Bulk & Incremental).
     - [ ] Implement Shopify Webhook listeners (Order Create/Update).
     - [ ] Create Order Listing UI (Status tabs, Search).
     - [ ] Create Order Details View (Customer info, Line items, Payment status).
 
-- [ ] **Dashboard & UI**
-    - [ ] Build Main Dashboard Layout (Sidebar, Header).
+- [x] **Dashboard & UI**
+    - [x] Build Main Dashboard Layout (Sidebar, Header).
     - [ ] Create "Recent Orders" widget.
     - [ ] Implement Sync Status indicators (Last sync time, Error logs).
 
